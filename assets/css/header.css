@@ -1,0 +1,137 @@
+
+header {
+     background-color: #3E0110;
+     position: sticky;
+     top: 0;
+     width: 100%;
+     z-index: 1000;
+}
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.logo{
+    width: 40px;
+    height: 40px; 
+}
+
+.logo img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logo-text {
+    width: 100px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.logo-text img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.menu {
+    height: 40px;
+}
+
+.menu-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+}
+
+.mm-line {
+    height: 1px;
+    width: 30px;
+    background-color: #A8743C;
+}
+
+.menu-mobile-click{
+    background-color: #FFF;
+}
+
+.itens-menu {
+    background-color: #3E0110;
+    position: absolute;
+    left: 0;
+    top: calc(90px);
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.menu a {
+    position: relative;
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    color: #CCC;
+    text-transform: uppercase;
+    display: block;
+    transition: var(--transition-fast);
+
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px; 
+  width: 0;
+  height: 1px;
+  background-color: #8b0000; 
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, transparent,#e0be66b6);
+
+}
+
+.menu a:hover{
+    color: var(--action-color);
+}
+
+.menu a:hover::after {
+  width: 150%; 
+}
+
+.show-menu {
+    display: flex;
+}
+
+
+
+
+@media(min-width: 768px) {
+    .logo{
+        width: 60px;
+        height: 60px; 
+    }
+
+    .logo-text {
+        height: 60px;
+    }
+
+    .logo-text img {
+        height: 100%;
+        object-fit: contain;
+    }
+}

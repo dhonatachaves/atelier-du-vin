@@ -40,3 +40,13 @@
     --transition-fast: all 0.3s ease;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-family-text);
+}
