@@ -1,6 +1,7 @@
 
 header {
      background-color: #3E0110;
+     box-shadow: 0px 1px 3px #3E0110;
      position: sticky;
      top: 0;
      width: 100%;
@@ -13,45 +14,50 @@ header {
     height: 90px;
 }
 
+
 .logo{
-    width: 40px;
-    height: 40px; 
+    width: 50px;
+    height: 50px; 
 }
+
+.logo:last-child {
+    display: none;
+}
+
 
 .logo img{
     width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
-.logo-text {
-    width: 100px;
-    height: 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    height: 100%;
+    object-fit: contain;
 }
 
 
-.logo-text img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.logo-text h1 {
+    color: #A8743C;
+    font-size: 1.2rem;
+    font-family: var(--font-family-titles);
+    padding: 0.625rem;
 }
 
 .menu {
-    height: 40px;
+    height: 50px;
 }
 
 .menu-mobile {
+    padding: 0.625rem 0.625rem 0 0.625rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 30px;
+    justify-content: space-around;
+    height: 40px;
     border: none;
     background-color: transparent;
+}
+
+.content-itens--menu h1 {
+    display: none;
+    color: #A8743C;
+    font-size: 2rem;
+    font-family: var(--font-family-titles);
 }
 
 .mm-line {
@@ -66,6 +72,7 @@ header {
 
 .itens-menu {
     background-color: #3E0110;
+    box-shadow: 0px 1px 3px #3E0110;
     position: absolute;
     left: 0;
     top: calc(90px);
@@ -83,12 +90,14 @@ header {
 .menu a {
     position: relative;
     font-weight: var(--font-weight-medium);
+    font-size: 1rem;
     text-decoration: none;
     color: #CCC;
     text-transform: uppercase;
     display: block;
     transition: var(--transition-fast);
-
+    padding: 0.625rem;
+    font-family: var(--font-family-text);
 }
 
 .menu a::after {
@@ -121,17 +130,89 @@ header {
 
 
 @media(min-width: 768px) {
-    .logo{
-        width: 60px;
-        height: 60px; 
+
+    .logo {
+        width: 90px;
+        height: 40px;
     }
 
-    .logo-text {
-        height: 60px;
+    .logo:last-child {
+        display: block;
     }
 
-    .logo-text img {
+    .logo img {
+        width: 100%;
         height: 100%;
-        object-fit: contain;
     }
+
+    .logo-text h1{
+        font-size: 2.5rem;
+        padding: 0;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .itens-menu {
+        position: unset;
+        top: unset;
+        left: unset;
+        width: unset;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+
+    .menu a {
+        padding: 0.3125rem;
+        font-size: 0.875rem;
+        text-transform: unset;
+        font-weight: 500;
+        color: #999;
+    }
+
+    .menu a:hover::after {
+        width: 100%; 
+    }
+
+    .content-itens--menu h1{
+        display: block;
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+    }
+
+    .content-itens--menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+}
+
+
+@media(min-width: 1024px) {
+
+
+    .itens-menu {
+       gap: 1rem;
+    }
+
+    .itens-menu a {
+        font-size: 1.1rem;
+    }
+
+    .logo-text h1{
+        font-size: 3.5rem;
+        padding: 0;
+    }
+    
+
 }
