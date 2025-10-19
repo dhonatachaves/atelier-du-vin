@@ -25,7 +25,7 @@ const listaDeVinhos = [
         descricao: "Irresístivel, a prova que o sabor perfeito existe. Aproveite!"
     },
     {
-        id: 1,
+        id: 4,
         nome: "Château Reserva Especial",
         preco: 2500,
         imagem: "assets/images/vinho-1.jpeg",
@@ -33,7 +33,9 @@ const listaDeVinhos = [
     }
 
 ];
-
+const gridContainer = document.querySelector('.product-grid');
+const quantidadeItensCarrinho = document.querySelector('.quantidade-itens');
+let itens = 0;
 
 menuMobile.addEventListener('click', showMenu);
 
@@ -58,7 +60,6 @@ function showMenu(e) {
 
 
 function gerarCardsDeProdutos() {
-    const gridContainer = document.querySelector('.product-grid');
     let htmlContent = '';
 
     listaDeVinhos.forEach(vinho => {
@@ -73,6 +74,27 @@ function gerarCardsDeProdutos() {
         htmlContent += cardHTML; // Concatena o HTML de cada card
     });
     gridContainer.innerHTML = htmlContent;
+
+    adicionarListenerAosBotoes();
 }
 
+function adicionarListenerAosBotoes() {
+    const botaoAdicionar = document.querySelectorAll('.add-to-cart-btn');
+
+    botaoAdicionar.forEach(btn => {
+        btn.addEventListener('click', adicionarCarrinho);
+        
+    });
+    
+}
+
+function adicionarCarrinho() {
+    itens++;
+    quantidadeItensCarrinho.textContent = `${itens}`;
+}
+
+
 document.addEventListener('DOMContentLoaded', gerarCardsDeProdutos);
+
+
+
