@@ -7,16 +7,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A L’Atelier du Vin — Loja de Vinhos Premium</title>
-
+    
     <link rel="stylesheet" href="assets/css/style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
         <div class="header-area container">
             <div class="logo">
-                    <img src="Logo.png" alt="Imagem da logo">
+                <img src="Logo.png" alt="Imagem da logo">
             </div>
 
             <div class="logo-text">
@@ -25,17 +26,16 @@
 
             <div class="menu">
                 <button class="menu-mobile"
-                aria-controls="main-menu-items" 
-                aria-expanded="false"
-                aria-label="Abrir e fechar menu de navegação">
-                        <div class="mm-line"></div>
-                        <div class="mm-line"></div>
-                        <div class="mm-line"></div>      
-                          
+                        aria-controls="main-menu-items" 
+                        aria-expanded="false"
+                        aria-label="Abrir e fechar menu de navegação">
+                    <div class="mm-line"></div>
+                    <div class="mm-line"></div>
+                    <div class="mm-line"></div>       
                 </button>
 
-                <nav class="content-itens--menu">
-                    <ul class="itens-menu" id="main-menu-items">
+                <nav class="menu-nav-content">
+                    <ul class="menu-items" id="main-menu-items">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Cardápio</a></li>
                         <li><a href="#">Avaliações</a></li>
@@ -44,7 +44,7 @@
             </div>
 
             <div class="logo">
-              <img src="Logo.png" alt="Imagem da logo">
+                <img src="Logo.png" alt="Imagem da logo">
             </div>
         </div>
     </header>
@@ -55,12 +55,32 @@
             </div>
         </section>
     </main>
-    <aside class="aside-carrinho-de-compras">
-            <button class="carrinho-de-compras">
-                <img src="assets/images/icone-carrinho-de-compras.png" alt="Icone de carrinho de compras">
-                <span class="quantidade-itens">0</span>
-            </button>
-     </aside>
+
+    <aside class="cart-widget">
+        <button class="cart-button">
+            <img src="assets/images/icone-carrinho-de-compras.png" alt="Icone de carrinho de compras">
+            <span class="cart-quantity-bubble">0</span>
+        </button>
+    </aside>
+
+    <aside class="cart-sidebar">
+        <button class="cart-close-button">
+            <img src="assets/icons/close.svg" alt="Fechar carrinho">
+        </button>
+
+        <div class="cart-items-container">
+            </div>
+
+        <footer class="cart-footer">
+            <div>
+                <p>Subtotal: </p>
+                <span class="subtotal">R$ 00.00</span>
+            </div>
+            <button class="checkout-button">Finalizar Pedido</button>
+        </footer>
+    </aside>
+    
+    <div class="overlay"></div>
 
     <script src="assets/js/script.js"></script>
 </body>
