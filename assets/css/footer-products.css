@@ -1,0 +1,37 @@
+/* --- Rodapé do Carrinho (footer.css) --- */
+/* (Este é o .pedido-footer do seu HTML original) */
+.cart-footer {
+    background-color: #FFF;
+    padding: 10px;
+    flex-shrink: 0; /* Impede que o rodapé encolha (Flexbox) */
+}
+
+.cart-footer div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.cart-footer p,
+.cart-footer span {
+    font-size: 1rem;
+}
+
+/* Renomeado de .btn-finalizar-compra */
+.checkout-button {
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: var(--font-family-text);
+    font-weight: 600;
+    color: #A8743C;
+    background-color: #3E0110;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    transition: var(--transition-fast);
+    color: #DAA520;
+}

@@ -1,14 +1,15 @@
+/* --- Seção de Produtos (section.css) --- */
 .products-section {
     margin-top: 1rem;
 }
 
-.product-grid{
+.product-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.25rem;
     justify-items: center;
+    margin-top: 100px;
 }
-
 
 .product-card {
     text-align: center;
@@ -35,7 +36,6 @@
     font-size: 0.9rem;
     font-style: italic;
     letter-spacing: 1px;
-    
 }
 
 .product-card .price {
@@ -64,7 +64,6 @@
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .product-card img {
         height: 480px;
     }
@@ -74,10 +73,7 @@
     .product-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-
-
     .product-card img {
         height: 480px;
     }
-    
 }

@@ -1,0 +1,217 @@
+.cart-sidebar {
+    position: fixed;
+    top: 90px;
+    height: calc(100vh - 90px);
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 10px;
+    z-index: 3; /* Camada mais alta */
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Renomeado de .caixa-itens */
+.cart-items-container {
+    flex: 1; /* Ocupa todo o espaço vertical disponível */
+    overflow-y: auto; /* Adiciona scroll SÓ neste container */
+}
+
+/* Renomeado de .itens */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    padding-right: 20px;
+    background-color: #FFF;
+}
+
+.item-img {
+    width: 70px;
+    height: 70px; /* Altura fixa para alinhar as imagens */
+    overflow: hidden;
+}
+
+/* Renomeado de .itens .item-img img */
+.cart-item .item-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* Impede que a imagem distorça */
+}
+
+/* Renomeado de .item-funcionalidades */
+.item-details {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Renomeado de .item-titulo */
+.item-title {
+    width: 110px;
+    color: var(--secondary-color);
+}
+
+.item-title h3 {
+    max-width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Renomeado de .icon-remover */
+.remove-item-button {
+    cursor: pointer;
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #A8743C;
+    font-weight: 600;
+    font-family: var(--font-family-text);
+    transition: var(--transition-fast);
+}
+
+.remove-item-button:hover {
+    background-color: #8A0000;
+    color: #DAA520;
+}
+
+/* Renomeado de .item-quantidade-container */
+.item-quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Renomeado de .controle-quantidade */
+.quantity-control-button {
+    cursor: pointer;
+    border: none;
+    background-color: unset;
+}
+
+.quantity-control-button img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Renomeado de .fechar-tela-pedido */
+.cart-close-button {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #FFF;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 7px;
+    top: 4px;
+    z-index: 1010;
+}
+
+/* Renomeado de .tela-de-pedido.carrinho-aberto */
+.cart-sidebar.cart-open {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+/* Renomeado de .carrinho-vazio */
+.cart-empty-message {
+    font-size: 1rem;
+    color: #A8743C;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Renomeado de .carrinho-vazio-centralizado */
+/* Agora é uma classe de "estado" no container */
+.cart-items-container.is-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(min-width: 768px) {
+    /* Renomeado de .icon-remover */
+    .remove-item-button {
+        font-size: 1.2rem;
+    }
+    /* Renomeado de .itens */
+    .cart-item {
+        padding-right: 30px;
+    }
+    .item-img {
+        width: 150px;
+        height: 150px;
+    }
+    /* Renomeado de .item-titulo */
+    .item-title {
+        width: 250px;
+    }
+    .item-title h3 {
+        font-size: 1.2rem;
+    }
+    /* Renomeado de .controle-quantidade */
+    .quantity-control-button {
+        width: 30px;
+        height: 30px;
+    }
+    /* Renomeado de .quantidade-valor */
+    .quantity-value {
+        font-size: 1.2rem;
+    }
+    /* Renomeado de .carrinho-vazio */
+    .cart-empty-message {
+        font-size: 1.5rem;
+    }
+}
+
+@media(min-width: 1024px) {
+    /* Renomeado de .tela-de-pedido */
+    .cart-sidebar {
+        right: 0;
+        width: 40%;
+        max-width: 600px;
+    }
+    /* Renomeado de .icon-remover */
+    .remove-item-button {
+        font-size: 1rem;
+    }
+    .item-img {
+        width: 100px;
+        height: 150px;
+    }
+    /* Renomeado de .item-titulo */
+    .item-title {
+        flex: 1;
+        width: unset;
+    }
+    .item-title h3 {
+        font-size: 1rem;
+    }
+    /* Renomeado de .item-quantidade-container */
+    .item-quantity-controls {
+        flex: 1;
+        justify-content: left;
+    }
+    /* Renomeado de .controle-quantidade */
+    .quantity-control-button {
+        width: 40px;
+        height: 40px;
+    }
+    /* Renomeado de .quantidade-valor */
+    .quantity-value {
+        font-size: 1rem;
+    }
+}

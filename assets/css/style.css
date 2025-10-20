@@ -1,4 +1,6 @@
 @import url(global.css);
 @import url(header.css);
-@import url(section.css);
+@import url(section-products.css);
 @import url(buttons.css);
+@import url(order-screen.css);
+@import url(footer-products.css);
