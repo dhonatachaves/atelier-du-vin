@@ -77,6 +77,7 @@ function openCart() {
     // Renomeado de '.bloqueio-de-rolagem'
     document.documentElement.classList.add('scroll-lock');
     document.body.classList.add('scroll-lock');
+    renderCartItems();
 }
 
 // Renomeado de 'fecharCarrinho'
